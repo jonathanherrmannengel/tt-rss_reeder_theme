@@ -2308,13 +2308,12 @@ div.insensitive{
 	
 	}
 	
-	#feeds-holder * {
-		visibility:hidden !important;
-
+	#feeds-holder #feedTree {
+		display: none !important;
 	}		
 	
-	#feeds-holder:hover * {
-		visibility: visible !important;
+	#feeds-holder:hover #feedTree {
+		display: unset !important;
 	}
 	
 	#feeds-holder_splitter, #feeds-holder_splitter * {
