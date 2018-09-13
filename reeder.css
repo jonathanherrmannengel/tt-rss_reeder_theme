@@ -707,7 +707,7 @@ overflow-y: auto;
 /* don't react on clicks between rows */
 #feeds-holder #feedTree:after {
 	background-color: rgba(239,230,207,1) !important; /*bg_dark*/
-  background-image: url(reeder/images/reeder_stripes.png) !important;
+	background-image: url(reeder/images/reeder_stripes.png) !important;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -2298,19 +2298,24 @@ div.insensitive{
 @media (max-width: 749px) {
 	
 	#feeds-holder{
-		width: 75vw !important;
-		left: calc(30px - 75vw) !important;
-		box-shadow: -30px 0px #827575 inset;
+		width: calc(100vw - 100px) !important;
+		left: calc(130px - 100vw) !important;
+		box-shadow: -30px 0px 0px 0px #af968b !important;
+		background: #af968b !important;
 	}		
 	
 	#feeds-holder:hover{
-		left: 0px !important;
-	
+		left: 30px !important;
 	}
+	
+	#feeds-holder .dijitTreeContainer {
+		width: calc(100vw - 100px) !important;
+	}	
 	
 	#feeds-holder #feedTree {
 		display: none !important;
-	}		
+		left: 30px;
+	}	
 	
 	#feeds-holder:hover #feedTree {
 		display: unset !important;
@@ -2318,10 +2323,6 @@ div.insensitive{
 	
 	#feeds-holder_splitter, #feeds-holder_splitter * {
 		display: none !important;
-	}
-	
-	#feedTree {
-		width: auto !important;
 	}
 	
 	#header-wrap, #content-wrap {
