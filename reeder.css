@@ -374,7 +374,7 @@ ul#filterDlg_Matches, ul#filterDlg_Actions {
 	overflow : auto;
 	list-style-type : none;
 	border-style : solid;
-  border-color : #ddd;
+	border-color : #ddd;
 	border-width : 0px 1px 1px 1px;
 	background-color : white;
 	margin : 0px 0px 5px 0px;
@@ -660,8 +660,8 @@ overflow-y: auto;
 	display: block !important;
 }
 #ttrssMain #main-toolbar > .dijitButton .dijitButtonNode {
-  background-color: rgba(239,230,207,1) !important; /*bg_darker*/
-  background-image: url(reeder/images/reeder_stripes.png) !important;
+	background-color: rgba(239,230,207,1) !important; /*bg_darker*/
+	background-image: url(reeder/images/reeder_stripes.png) !important;
 	position: fixed;
 	top: 0;
 	bottom: 0;
@@ -2292,8 +2292,9 @@ div.insensitive{
   border-radius: 3px;
 }
 
-
-/*MOBILE VERSION*/
+/*************************************************************************************
+* Mobile Version
+*/
 
 @media (max-width: 749px) {
 	
