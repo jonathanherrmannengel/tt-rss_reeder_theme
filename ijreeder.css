@@ -1,0 +1,265 @@
+/* supports-version:18.8 */
+
+@import url("reeder.css");
+
+html {
+	color: #383734;
+}
+a {
+	color: #4a404c;
+}
+#headlines-toolbar .main {
+	color: #383734;
+}
+#headlines-toolbar .main > * {
+	color: #383734;
+}
+#main,
+#feeds-holder,
+#main #headlines-wrap-inner .dijitSplitter {
+	background: #827575 ;
+}
+#header-wrap,
+#content-wrap,
+#toolbar {
+	background-color: rgba(239,230,207,1); /*bg_darker*/
+}
+#main #content-wrap .dijitSelect,
+#main #content-wrap .dijitButtonContents,
+#main #content-wrap .dijitButtonNode,
+#main #content-wrap .dijitArrowButton {
+	color: #383734;
+}
+#overlay {
+	background: #e9e6d7; /*bg_bright*/
+}
+#ttrssMain #main-toolbar > .dijitButton .dijitButtonNode {
+	background-color: rgba(239,230,207,1) !important; /*bg_darker*/
+}
+#feeds-holder .dijitTreeRow {
+	color: #383734;
+}
+#feeds-holder .dijitTreeRow .counterNode.aux {
+	color: #383734;
+}
+#ttrssMain .dijitTreeRow,
+#ttrssMain .dijitTreeNode .dojoDndItemBefore,
+#ttrssMain .dijitTreeNode .dojoDndItemAfter {
+	color: #4f4e48;
+}
+#ttrssMain .dijitTreeRowHover,
+#ttrssMain .dijitTreeNode .dojoDndItemBeforeHover,
+#ttrssMain .dijitTreeNode .dojoDndItemAfterHover {
+	background-color: rgba(239,230,207,1); /*bg_darker*/
+	color: #383734;
+}
+#ttrssMain .dijitTreeRowSelected {
+	background-color: rgba(239,230,207,1); /*bg_darker*/
+	color: #383734;
+}
+#ttrssMain .dijitTreeIsRoot > .dijitTreeRow {
+	border-top: 1px solid #8e8b8b !important;
+	color: #383734;
+}
+#ttrssMain .dijitTreeIsRoot > .dijitTreeRowHover {
+	background-color: rgba(239,230,207,1); /*bg_darker*/
+	color: #383734;
+}
+
+#feedTree .counterNode,
+#feedTree .counterNode.aux {
+	background-color: #d2d0c4;
+	color: #383734;
+	border-radius: 2px;
+}
+#headlines-wrap-inner {
+	background: #e9e6d7; /*bg_bright*/
+}
+#headlines-wrap-inner:before {
+	background: #e9e6d7; /*bg_bright*/
+}
+#headlines-wrap-inner:after {
+	background: #e9e6d7; /*bg_bright*/
+	border-top: 1px solid #8e8b8b;
+}
+#feed_title {
+	color: #383734;
+}
+#headlines-spacer:after {
+	background-color: rgba(239,230,207,1); /*bg_darker*/
+	color: #383734;
+	text-shadow: 0 1px 1px #827575;
+}
+.cdm.expandable,
+.hl {
+	border: 0 solid #827575;
+}
+.hl.Selected {
+	background-color: rgba(239,230,207,1); /*bg_darker*/
+}
+.cdm.expandable:not(.active):hover .cdmHeader,
+.hl:hover,
+#headlines-frame.wide .hl:hover/* > .hlTitle*/,
+.collapseBtn:hover {
+	background: rgba(239,230,207,1); /*bg_darker*/
+}
+.cdm.expandable.active .title,
+.cdm.expanded .title {
+	color: #383734;
+}
+#floatingTitle,
+.cdm .title,
+.cdm .cdmHeader,
+.hl,
+.hl a,
+.hl.Unread .contentPreview {
+	color: #4a404c;
+}
+#floatingTitle.Unread .title,
+.cdm.Unread .title,
+.hl.Unread .hlContent a,
+.postHeader .postTitle a {
+	color: #383734;
+}
+.postHeader {
+	color: #383734;
+}
+.collapseBtn:hover:before {
+	color: #4a404c;
+}
+.cdmContentInner hr,
+.postContent hr {
+	border-top: 1px solid #8e8b8b;
+}
+.cdmContentInner pre,
+.postContent pre,
+.cdmContentInner code,
+.postContent code {
+	color: #383734;
+}
+.cdmContentInner pre,
+.postContent pre {
+	border: 1px solid #8e8b8b;
+}
+.cdmContentInner code,
+.postContent code {
+	border: 1px solid #8e8b8b;
+}
+.cdmContentInner q,
+.postContent q,
+.cdmContentInner blockquote,
+.postContent blockquote {
+	border-left: 4px solid #827575;
+}
+.ttrss_prefs #main {
+	background: #efeae6;	
+}
+.ttrss_prefs .feedParam,
+.ttrss_prefs .labelParam,
+.ttrss_prefs .prefHelp {
+	color: #4a404c;
+}
+#overlay {
+	background: #f4eede;
+	background-image: url(ijreeder/linen_bg.png);
+	background-repeat: repeat;
+	color: #383734;
+}
+div.insensitive{
+	color: #383734;
+}
+#overlay_inner {
+	background-color: #f4eede;
+	border : 1px solid #8e8b8b;
+	border-radius: 90px;
+}
+#overlay_inner .dijitProgressBar {
+	background-color: #f4eede;
+	border-radius: 70px;
+}
+#overlay_inner .dijitProgressBarTile {
+	background-color: #af968b;
+}
+#overlay_inner .dijitProgressBarLabel {
+	color: #383734;
+}
+
+/*************************************************************************************
+* Mobile Version
+*/
+
+@media (max-width: 749px) {
+	
+	#feeds-holder{
+		width: calc(100vw - 100px) !important;
+		left: calc(130px - 100vw) !important;
+		box-shadow: -30px 0px 0px 0px #af968b !important;
+		background: #af968b !important;
+	}		
+	
+	#feeds-holder:hover{
+		left: 30px !important;
+	}
+	
+	#feeds-holder .dijitTreeContainer {
+		width: calc(100vw - 100px) !important;
+	}	
+	
+	#feeds-holder #feedTree {
+		display: none !important;
+		left: 30px;
+	}	
+	
+	#feeds-holder:hover #feedTree {
+		display: unset !important;
+	}
+	
+	#feeds-holder_splitter, #feeds-holder_splitter * {
+		display: none !important;
+	}
+	
+	#header-wrap, #content-wrap {
+		width: 100vw !important;
+		left: 0px !important;
+		z-index: -1;
+	}
+	
+	#toolbar {
+		width: calc(100vw - 30px) !important;
+		left: 0px !important;
+		height: 55px;
+	}
+	
+	#toolbar {
+		overflow-x: auto !important;
+	}
+	
+	#headlines-toolbar {
+		width: auto !important;
+	}
+	
+	#headlines-toolbar > .holder > .r {
+		display: block;
+		width: 20vw;
+	}
+	
+	#headlines-toolbar > .holder > .r > #feed_title {
+		max-width: calc(20vw - 24px);
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	
+	#headlines-wrap-inner {
+		width: calc(100vw - 30px) !important;
+		left: 30px !important;
+	}
+	
+	#headlines-frame {
+		width: calc(90vw - 30px) !important;
+		margin: 0vw !important;
+		padding: 0vw !important;
+		padding-left: 5vw !important;
+		padding-right: 5vw !important;
+	}
+	
+}
