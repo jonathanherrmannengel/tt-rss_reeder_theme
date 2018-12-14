@@ -316,7 +316,9 @@ img.tinyFeedIcon  {
 .cdm .header .h1Right > * {
   align-self: center;
 }
-
+body.ttrss_main #overlay_inner .insensitive {
+	color: #383734;
+}
 /*LEGACY_END*/
 
 
@@ -1454,6 +1456,43 @@ body.ttrss_main #content-insert {
 	z-index: 3;
 	background: rgba(239,230,207,1); /*bg_dark*/
 }
+body.ttrss_main #content-insert .header {
+	display: flex;
+}
+body.ttrss_main #content-insert .header * {
+	align-self: center;
+}
+body.ttrss_main #content-insert .header > * {
+	padding: 10px;
+}
+body.ttrss_main #content-insert .header .row > * {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+body.ttrss_main #content-insert .header .title {
+	font-weight: bold;
+}
+
+
+body.ttrss_main #content-insert .content {
+  margin: 10px;
+  line-height: 1.9em;
+  font-size: 14px;
+  padding: 20px;
+}
+body.ttrss_main #content-insert .content a {
+  color: #911e29;
+}
+body.ttrss_main #content-insert .content img {
+	display: block;
+}
+body.ttrss_main #content-insert .content p {
+  hyphens: auto;
+}
+body.ttrss_main #content-insert .content * {
+  max-width: 100%;
+}
+
 body.ttrss_main #headlines-frame {
 	background-color:#f4eede;
 	z-index: 3;
