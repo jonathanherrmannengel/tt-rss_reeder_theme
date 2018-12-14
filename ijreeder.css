@@ -3307,7 +3307,7 @@ body.ttrss_main #overlay_inner .dijitProgressBarLabel {
 * Mobile Version
 */
 
-@media (max-width: 749px) {
+@media (max-width: 799px) {
 	
 	#feeds-holder{
 		width: calc(100vw - 100px) !important;
@@ -3425,5 +3425,10 @@ body.ttrss_main #overlay_inner .dijitProgressBarLabel {
 	#content-insert, #content-insert_splitter {
 		width: 100% !important;
 	}
+	
+	#content-insert .header {
+		overflow: auto;
+	}
+	
 	
 }
