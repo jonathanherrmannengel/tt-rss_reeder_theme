@@ -1,4 +1,5 @@
 /* supports-version:18.12 */
+
 @import "../lib/flat-ttrss/flat_combined.css";
 /*Create locally stored OpenSans font */
 /* ----------------------------------------------------------
@@ -127,6 +128,166 @@
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
+
+
+
+/*LEGACY_BEGIN*/
+
+
+#main-toolbar,
+#headlines-toolbar .holder {
+	display: table;
+	width: 100%;
+}
+#headlines-toolbar,
+#headlines-toolbar .main,
+#main_toolbar_form,
+.actionChooser {
+	display: table-cell;
+	vertical-align: top;
+	white-space: nowrap;
+}
+
+#headlines-toolbar {
+	width: 100%;
+}
+#headlines-toolbar_splitter,
+#toolbar_splitter {
+	display: none;
+}
+
+#toolbar {
+	padding-left: 32px;
+	padding-right: 32px;
+	height: 45px;
+	z-index: 3;
+}
+#main-toolbar {
+	padding: 0;
+	height: 45px;
+	border: none;
+	background: transparent;
+	margin-bottom: -1px;
+	margin-top: 9px;
+}
+#headlines-toolbar .r img {
+	padding-top:3px;
+}
+#headlines-toolbar .main {
+	width: 100%;
+	color: #4f4e48;
+	text-align: right;
+	cursor: default;
+}
+/*#headlines-toolbar .main*/ #selected_prompt {
+	margin: 1px 0 0 12px;
+}
+#headlines-toolbar .main > * {
+	color: #4f4e48;
+	vertical-align: middle !important;
+	font-size: 12px;
+}
+#headlines-toolbar .main > a {
+	margin: 0 10px 0 2px;
+	text-decoration: none;
+	transition: color .2s;
+}
+#headlines-toolbar .main > a:hover {
+	color: #444;
+}
+#ttrssMain #main {
+	padding: 0 0 0 30px;
+}
+/* status icons */
+#main-toolbar .actionChooser > .dijitButton .dijitButtonNode {
+	padding: 0;
+}
+
+
+html, button, input, select, textarea {
+	font: 12px/1.5 'Open Sans' , "Helvetica Neue", Arial, Helvetica, "Liberation Sans", "Nimbus Sans L", FreeSans, sans-serif;
+}
+:focus {
+	outline: none;
+}
+input[type="search"] {
+	-webkit-appearance: none;
+}
+textarea {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.claro .dijitBorderContainer,
+.claro .dijitSplitContainer-dijitContentPane,
+.claro .dijitBorderContainer-dijitContentPane {
+	padding: 0;
+}
+img,
+.claro .dijitSplitContainer-child,
+.claro .dijitBorderContainer-child {
+	border: 0;
+}
+
+/* BASE LAYOUT ************************************************************/
+
+.ttrss_main,
+#ttrssMain,
+.ttrss_prefs {
+	width: 100vw,
+	height: 100vh,
+	position: absolute;
+	margin: 0px;
+	overflow: hidden;
+	max-height: 100vh;
+}
+#main {
+	width: 100%;
+	position: absolute;
+	height:100%;
+}
+#main-toolbar,
+#headlines-toolbar .holder {
+	display: table;
+	width: 100%;
+}
+#headlines-toolbar,
+#headlines-toolbar .main,
+#main_toolbar_form,
+.actionChooser {
+	display: table-cell;
+	vertical-align: top;
+	white-space: nowrap;
+}
+
+#headlines-toolbar {
+	width: 100%;
+}
+#headlines-toolbar_splitter,
+#toolbar_splitter {
+	display: none;
+}
+img.feedIcon,
+img.tinyFeedIcon  {
+	width: 16px;
+	height: 16px;
+}
+
+
+#floatingTitle {
+	margin: 0 !important;
+}
+#toolbar {
+	background-color: rgba(239,230,207,1); /*bg_darker*/
+}
+#headlines-toolbar .main {
+	color: #383734;
+}
+#headlines-toolbar .main > * {
+	color: #383734;
+}
+
+
+/*LEGACY_END*/
 
 
 /* FROM TT-RSS.CSS ************************************************************/
