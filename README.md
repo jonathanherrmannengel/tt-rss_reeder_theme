@@ -8,3 +8,4 @@ Modified by @jonathanherrmannengel
 * Each release of this theme is based on a *TT-RSS* version. 
 * https://github.com/jonathanherrmannengel/tt-rss_reeder_theme/releases gives you an overview about all the releases.
 * Please only use the newest theme release fitting your *TT-RSS* version.
+* *Example for 18.8*: https://github.com/jonathanherrmannengel/tt-rss_reeder_theme/releases/tag/18.8.2
