@@ -3370,14 +3370,21 @@ body.ttrss_main #overlay_inner .dijitProgressBarLabel {
 	
 	
 	div#floatingTitle div.feed,
+	.feed,
 	div.cdm.expandable .feed {
 		max-width: 5vw;
 	}
 	div#floatingTitle div.feed a,
+	.feed a,
 	.cdm div.header div.feed a {
+		display: inline-block;
 		text-overflow: ellipsis;
 		overflow: hidden;
 		max-width: inherit;
+	}
+	
+	#content-insert, #content-insert_splitter {
+		width: 100% !important;
 	}
 	
 }
