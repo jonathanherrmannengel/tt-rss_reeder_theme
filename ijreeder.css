@@ -1,6 +1,7 @@
 /* supports-version:18.12 */
 
 @import "../lib/flat-ttrss/flat_combined.css";
+@import "reeder/claro-mod.min.css"; /*legacy*/
 /*Create locally stored OpenSans font */
 /* ----------------------------------------------------------
 /* BEGIN Light */
@@ -129,6 +130,22 @@
   font-feature-settings: 'liga';
 }
 
+.header {
+	padding: 5px;
+}
+
+.hlMenuAttach {
+	display: flex;
+}
+
+.hlMenuAttach > *{
+	display: inline-flex;
+	align-self: center;
+}
+
+#floatingTitle > :first-child > *, #floatingTitle > .scoreWrap img, .cdm .cdmHeader > :first-child > *, .cdm .cdmHeader > .scoreWrap img, .hl .hlLeft > *, .hl .hlRight img {
+float: none;
+}
 
 
 /*LEGACY_BEGIN*/
@@ -164,7 +181,7 @@
 }
 #main-toolbar {
 	padding: 0;
-	height: 45px;
+	height: 36px;
 	border: none;
 	background: transparent;
 	margin-bottom: -1px;
@@ -172,6 +189,10 @@
 }
 #headlines-toolbar .r img {
 	padding-top:3px;
+}
+#headlines-toolbar #feed_title {
+	padding-left: 10px;
+	padding-right: 10px;
 }
 #headlines-toolbar .main {
 	width: 100%;
@@ -286,6 +307,15 @@ img.tinyFeedIcon  {
 	color: #383734;
 }
 
+
+.cdm .header .h1Left,
+.cdm .header .h1Right {
+  display: flex;
+}
+.cdm .header .h1Left > *,
+.cdm .header .h1Right > * {
+  align-self: center;
+}
 
 /*LEGACY_END*/
 
@@ -1002,6 +1032,7 @@ body.ttrss_main #content-wrap {
 #main #content-wrap .dijitButtonNode,
 #main #content-wrap .dijitArrowButton {
 	border-color: transparent;
+	background-image: none;
 	background-color: transparent;
 	box-shadow: none;
 	color: #383734;
@@ -1597,6 +1628,19 @@ div#floatingTitle.Unread a.title {
 	border: 0 solid #827575;
 	border-width: 1px;
 }
+
+body.ttrss_main .hl {
+    transition: color 0.2s, background 0.2s;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+body.ttrss_main .hl > * {
+    align-self: center;
+    white-space: nowrap;
+}
+
 div.cdm.expandable div.header a.title {
 	font-weight: 600;
 	color: #4a404c;
@@ -1625,6 +1669,13 @@ div.cdm.expanded div.header {
   background: transparent ! important;
 }
 
+body.ttrss_main div.post div.content {
+	padding: 12px;
+}
+body.ttrss_main div.post div.header {
+	padding: 12px;
+	font-size: 130%;
+}
 body.ttrss_main div.post div.header .row {
   display: flex;
   margin-bottom: 4px;
@@ -1833,7 +1884,6 @@ div.cdm.expandable:not(.active) .collapse {
 .hl .hlLeft > *,
 .hl .hlRight img {
 	/*display: none;*/
-	float: right;
 	margin-right: 6px;
 }
 .ttrss_main .tinyFeedIcon,
@@ -2446,6 +2496,15 @@ body.ttrss_main .label > * {
 .cdm .header .left > *,
 .cdm .header .right > * {
   align-self: center;
+}
+
+body.ttrss_main .hl div.title {
+
+    cursor: pointer;
+    flex-grow: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 }
 .cdm .header .left i.material-icons,
 .cdm .header .right i.material-icons {
@@ -3262,7 +3321,7 @@ body.ttrss_main #overlay_inner .dijitProgressBarLabel {
 		border: 0 !important;
 		overflow: hidden !important;
 	}
-	body.ttrss_main #toolbar-frame #toolbar {
+	body.ttrss_main #toolbar-frame #toolbar, #toolbar /*#toolbar=legacy*/ {
 		width: calc(100vw - 30px) !important;
 		left: 0px !important;
 		height: 55px;
