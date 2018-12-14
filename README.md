@@ -5,6 +5,6 @@ Modified by @jonathanherrmannengel
 
 
 *PLEASE NOTE*
-* Each release of this theme is based on a _TT-RSS_ version. 
+* Each release of this theme is based on a *TT-RSS* version. 
 * https://github.com/jonathanherrmannengel/tt-rss_reeder_theme/releases gives you an overview about all the releases.
-* Please only use a release fitting your _TT-RSS_ version.
+* Please only use the newest theme release fitting your *TT-RSS* version.
