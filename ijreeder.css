@@ -349,28 +349,6 @@ body.ttrss_main .inline-player audio {
   margin-right: 8px;
 }
 
-body.ttrss_main .wide .hl .left,
-body.ttrss_main .wide .hl .right {
-	position: relative;
-}
-
-body.ttrss_main .wide .title * {
-	padding: 20px;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-body.ttrss_main .wide .preview {
-	padding: 0;
-	padding-left: 5px;
-}
-body.ttrss_main .wide .title .author {
-	font-size: 110%;
-	font-weight: 650;
-	position: absolute;
-	top: 0;
-	padding: 8px 7px;
-}
 body.ttrss_main .hl .left i.material-icons,
 body.ttrss_main .hl .right i.material-icons {
   margin-left: 2px;
@@ -1323,6 +1301,21 @@ div.cdm.vgrlf .feed {
   font-style: italic;
   font-size: 11px;
 }
+
+div#floatingTitle div.feed,
+.feed,
+div.cdm.expandable .feed {
+	max-width: 5vw;
+}
+div#floatingTitle div.feed a,
+.feed a,
+.cdm div.header div.feed a {
+	display: inline-block;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	max-width: inherit;
+}
+
 .ttrss_main .dijitTreeIsRoot > .dijitTreeRow {
 	background-color: rgba(239,230,207,1); /*bg_dark*/
 	border-top: 1px solid #8e8b8b !important;
@@ -1479,6 +1472,7 @@ body.ttrss_main #content-insert {
 }
 body.ttrss_main #content-insert .header {
 	display: flex;
+	overflow: auto;
 }
 body.ttrss_main #content-insert .header * {
 	align-self: center;
@@ -1763,7 +1757,6 @@ body.ttrss_main div.post div.header i {
 }
 /*height not applied in Widescreen mode*/
 #floatingTitle,
-not(#headlines-frame.wide),
 .hl {
 	height: 32px;
 }
@@ -1965,11 +1958,13 @@ div.cdm.expandable:not(.active) .collapse {
 .cdm.expandable.Selected:not(.active) {
   background: #3f728e;
 }
-.cdm.expandable.Selected:not(.active) a,
-.cdm.expandable.Selected:not(.active) .header a.title,
-.cdm.expandable.Selected:not(.active) span {
+.Selected:not(.active) a.title {
   color: #000;
   font-weight: 850;
+}
+.active a.title {
+  color: #000;
+  font-weight: 650;
 }
 .cdm.expandable.marked img[src*='images/mark_set'],
 .hl.marked img[src*='images/mark_set'],
@@ -2004,12 +1999,9 @@ body.ttrss_main .hl.published .left i.pub-pic {
   color: #ff0cfb;
 }
 
-#headlines-frame.wide .hl:hover > * {
-	background: transparent; /* only .hlTitle should have background color (next rule) */
-}
+
 .cdm.expandable:not(.active):hover .cdmHeader,
 .hl:hover,
-#headlines-frame.wide .hl:hover/* > .hlTitle*/,
 .collapseBtn:hover {
 	background: rgba(239,230,207,1); /*bg_darker*/
 	cursor: pointer;
@@ -2025,39 +2017,7 @@ body.ttrss_main .hl.published .left i.pub-pic {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-#headlines-frame.wide .hl {
-	flex-wrap: wrap;
-}
-#headlines-frame.wide .hl:before {
-	content: "";
-	display: block;
-	flex: 99;
-	order: 3;
-}
-body.ttrss_main div#headlines-frame.wide .title{
-	white-space: normal;
-	width: 100%;
-	margin-top: -35px;
-	padding-top: 35px;
-	margin-left: -10px;
-	padding-left: 15px;
-	flex: 100% 1;
-	order: 4;
-}
 
-body.ttrss_main div#headlines-frame.wide .active .title,
-body.ttrss_main div#headlines-frame.wide .Selected .title {
-	font-weight: bold;
-}
-
-body.ttrss_main div#headlines-frame.wide .expandable .title{
-	white-space: nowrap;
-	order: initial;
-}
-
-body.ttrss_main div#headlines-frame.wide .hl .feed {
-  display: none;
-}
 
 /* articles - not expanded */
 .cdmHeader {
@@ -3339,7 +3299,7 @@ body.ttrss_main #overlay_inner .dijitProgressBarLabel {
 * Mobile Version
 */
 
-@media (max-width: 799px) {
+@media (max-width: 849px) {
 	
 	#feeds-holder{
 		width: calc(100vw - 100px) !important;
@@ -3386,15 +3346,6 @@ body.ttrss_main #overlay_inner .dijitProgressBarLabel {
 		left: 30px !important;
 	}
 	
-	
-	#headlines-frame {
-		width: calc(90vw - 30px) !important;
-		margin: 0vw !important;
-		padding: 0vw !important;
-		padding-left: 5vw !important;
-		padding-right: 5vw !important;
-	}
-	
 	.dijitPopup {
 		position: fixed;
 	}
@@ -3439,26 +3390,25 @@ body.ttrss_main #overlay_inner .dijitProgressBarLabel {
 		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
-	
-	div#floatingTitle div.feed,
-	.feed,
-	div.cdm.expandable .feed {
-		max-width: 5vw;
-	}
-	div#floatingTitle div.feed a,
-	.feed a,
-	.cdm div.header div.feed a {
-		display: inline-block;
-		text-overflow: ellipsis;
-		overflow: hidden;
-		max-width: inherit;
-	}
-	
+
 	#content-insert_splitter {
 		display: none !important;
 	}
-	#content-insert .header {
-		overflow: auto;
+	
+	#headlines-frame {
+		width: calc(90vw - 30px) !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		padding-left: 5vw !important;
+		padding-right: 5vw !important;
+	}
+	#headlines-frame:not(.cdm) {
+		left: 0 !important;
+		top: 0 !important;
+		padding: 0 !important;
+		bottom: 0 !important;
+		width: 100% !important;
+		height: 50% !important;
 	}
 
 	#content-insert {
@@ -3469,7 +3419,25 @@ body.ttrss_main #overlay_inner .dijitProgressBarLabel {
 		height: 50% !important; 
 		width: 100% !important;
 	}
+	
+}
 
+@media (max-width: 849px) and (orientation: landscape) {	
+
+	#headlines-frame:not(.cdm) {
+		width: 50% !important;
+		height: 100% !important;
+	}
+
+	#content-insert {
+		border: none !important;
+		border-left: 3px solid #af968b !important;
+		left: 50% !important;
+		top: 0 !important;
+		bottom: 0 !important;
+		height: 100% !important; 
+		width: 50% !important;
+	}
 	
 }
 
