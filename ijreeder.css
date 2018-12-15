@@ -353,6 +353,24 @@ body.ttrss_main .wide .hl .left,
 body.ttrss_main .wide .hl .right {
 	position: relative;
 }
+
+body.ttrss_main .wide .title * {
+	padding: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+body.ttrss_main .wide .preview {
+	padding: 0;
+	padding-left: 5px;
+}
+body.ttrss_main .wide .title .author {
+	font-size: 110%;
+	font-weight: 650;
+	position: absolute;
+	top: 0;
+	padding: 8px 7px;
+}
 body.ttrss_main .hl .left i.material-icons,
 body.ttrss_main .hl .right i.material-icons {
   margin-left: 2px;
@@ -2026,6 +2044,17 @@ body.ttrss_main div#headlines-frame.wide .title{
 	flex: 100% 1;
 	order: 4;
 }
+
+body.ttrss_main div#headlines-frame.wide .active .title,
+body.ttrss_main div#headlines-frame.wide .Selected .title {
+	font-weight: bold;
+}
+
+body.ttrss_main div#headlines-frame.wide .expandable .title{
+	white-space: nowrap;
+	order: initial;
+}
+
 body.ttrss_main div#headlines-frame.wide .hl .feed {
   display: none;
 }
@@ -3352,6 +3381,20 @@ body.ttrss_main #overlay_inner .dijitProgressBarLabel {
 		overflow: hidden;
 	}
 	
+	#headlines-wrap-inner {
+		width: calc(100vw - 30px) !important;
+		left: 30px !important;
+	}
+	
+	
+	#headlines-frame {
+		width: calc(90vw - 30px) !important;
+		margin: 0vw !important;
+		padding: 0vw !important;
+		padding-left: 5vw !important;
+		padding-right: 5vw !important;
+	}
+	
 	.dijitPopup {
 		position: fixed;
 	}
@@ -3388,19 +3431,6 @@ body.ttrss_main #overlay_inner .dijitProgressBarLabel {
 		text-overflow: ellipsis;
 	}
 	
-	#headlines-wrap-inner {
-		width: calc(100vw - 30px) !important;
-		left: 30px !important;
-	}
-	
-	#headlines-frame {
-		width: calc(90vw - 30px) !important;
-		margin: 0vw !important;
-		padding: 0vw !important;
-		padding-left: 5vw !important;
-		padding-right: 5vw !important;
-	}
-	
 	div#floatingTitle {
 		margin-right: 0 !important;
 	}
@@ -3409,7 +3439,6 @@ body.ttrss_main #overlay_inner .dijitProgressBarLabel {
 		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
-	
 	
 	div#floatingTitle div.feed,
 	.feed,
@@ -3425,19 +3454,22 @@ body.ttrss_main #overlay_inner .dijitProgressBarLabel {
 		max-width: inherit;
 	}
 	
-	#content-insert {
-		left: 0 !important;
-		top: 50% !important;
-		bottom: 0 !important;
-		height: 50% !important; 
-		width: 100% !important;
-	}
 	#content-insert_splitter {
 		display: none !important;
 	}
 	#content-insert .header {
 		overflow: auto;
 	}
-	
+
+	#content-insert {
+		border-top: 3px solid #af968b !important;
+		left: 0 !important;
+		top: 50% !important;
+		bottom: 0 !important;
+		height: 50% !important; 
+		width: 100% !important;
+	}
+
 	
 }
+
