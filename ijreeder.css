@@ -3314,7 +3314,6 @@ body.ttrss_main #overlay_inner .dijitProgressBarLabel {
 		left: calc(100px - 100vw) !important;
 		padding-left: 30px !important;
 		background: #af968b !important;
-		transition: left 0.8s ease
 	}		
 	
 	#feeds-holder:hover{
