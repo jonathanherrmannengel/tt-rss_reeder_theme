@@ -3311,13 +3311,14 @@ body.ttrss_main #overlay_inner .dijitProgressBarLabel {
 	
 	#feeds-holder{
 		width: calc(100vw - 100px) !important;
-		left: calc(130px - 100vw) !important;
-		box-shadow: -30px 0px 0px 0px #af968b !important;
+		left: calc(100px - 100vw) !important;
+		padding-left: 30px !important;
 		background: #af968b !important;
+		transition: left 0.8s ease
 	}		
 	
 	#feeds-holder:hover{
-		left: 30px !important;
+		left: 0px !important;
 	}
 	
 	#feeds-holder .dijitTreeContainer {
