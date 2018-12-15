@@ -349,7 +349,10 @@ body.ttrss_main .inline-player audio {
   margin-right: 8px;
 }
 
-
+body.ttrss_main .wide .hl .left,
+body.ttrss_main .wide .hl .right {
+	position: relative;
+}
 body.ttrss_main .hl .left i.material-icons,
 body.ttrss_main .hl .right i.material-icons {
   margin-left: 2px;
@@ -3422,10 +3425,16 @@ body.ttrss_main #overlay_inner .dijitProgressBarLabel {
 		max-width: inherit;
 	}
 	
-	#content-insert, #content-insert_splitter {
+	#content-insert {
+		left: 0 !important;
+		top: 50% !important;
+		bottom: 0 !important;
+		height: 50% !important; 
 		width: 100% !important;
 	}
-	
+	#content-insert_splitter {
+		display: none !important;
+	}
 	#content-insert .header {
 		overflow: auto;
 	}
