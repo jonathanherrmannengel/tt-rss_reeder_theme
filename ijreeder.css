@@ -1108,7 +1108,7 @@ body.ttrss_main #feeds-holder #feedTree {
 	overflow: hidden;
 	line-height: 25px;
 	box-sizing: border-box;
-	padding: 4px 6px;
+	padding: 6px;
 	max-width: 100%;
 	border: 0;
 	background: transparent;
