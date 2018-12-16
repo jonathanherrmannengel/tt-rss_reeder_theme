@@ -1696,22 +1696,29 @@ body.ttrss_main .hl > * {
 }
 
 div.cdm.expandable div.header a.title {
-	font-weight: 600;
 	color: #4a404c;
 	font-size: 14px;
 	padding-right: 10px;
 	transition: color 0.2s, background 0.2s;
 	font: 14px/1.5 'Open Sans', "Helvetica Neue", Arial, Helvetica, "Liberation Sans", "Nimbus Sans L", FreeSans, sans-serif;
+	font-weight: 500;
 }
 div.cdm.expandable.active div.header a.title {
 	color: #181764;
 	font: 20px/1.7 'Open Sans', "Helvetica Neue", Arial, Helvetica, "Liberation Sans", "Nimbus Sans L", FreeSans, sans-serif;
 	padding-right: 10px;
-	font-weight: 600;
+	font-weight: 500;
 	transition: color 0.2s, background 0.2s;
 }
+div.cdm.expandable.Selected:not(.active) div.header a.title {
+	font-weight: 700;
+}
+div.cdm.expandable.Selected.active div.header a.title {
+	font-weight: 600;
+}
 div.cdm.expandable.Unread div.header a.title {
-  color: black;
+	font-weight: 600;
+	color: black;
 }
 div.cdm.expanded.Unread div.content {
   color: black;
