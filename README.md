@@ -1,6 +1,11 @@
 This theme is based on tt-rss_reeder_theme by @tschinz...
-LICENSE: http://www.wtfpl.net/about/ (from https://github.com/tschinz/tt-rss_reeder_theme/issues/29)
 
+
+ORIGINAL REEDER THEME LICENSE: http://www.wtfpl.net/about/ (from https://github.com/tschinz/tt-rss_reeder_theme/issues/29)
+
+OPEN SANS FONT LICENSE: https://www.apache.org/licenses/LICENSE-2.0
+
+LICENSE: http://www.wtfpl.net/about/
 Modified by @jonathanherrmannengel
 
 
