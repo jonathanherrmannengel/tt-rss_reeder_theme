@@ -111,6 +111,8 @@
 	font-weight: normal;
 	font-style: normal;
 	font-size: 18px;
+	max-width: 1em;
+	overflow: hidden;
 	/* Preferred icon size */
 	display: inline-block;
 	line-height: 1;
