@@ -1610,6 +1610,15 @@ body.ttrss_main .hl div.title {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
+body.ttrss_main .hl.Unread a.title {
+	font-weight: 700;
+}
+body.ttrss_main .hl.Selected a.title {
+	font-weight: 800;
+}
+body.ttrss_main .hl.active a.title {
+	font-weight: 900;
+}
 body.ttrss_main .hl,
 body.ttrss_main .hl a,
 body.ttrss_main .hl.Unread .contentPreview {
@@ -1832,6 +1841,13 @@ body.ttrss_main .hl img {
 }
 .cdm.expanded .header .title {
 	font-size: 18px;
+	font-weight: 600;
+}
+.cdm.expanded.Unread .header .title {
+	font-weight: 700;
+}
+.cdm.expanded.Selected .header .title {
+	font-weight: 850;
 }
 .cdm.expanded .titleWrap {
 	white-space: normal;
