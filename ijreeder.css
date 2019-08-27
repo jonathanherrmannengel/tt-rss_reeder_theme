@@ -115,7 +115,6 @@
 	/* Preferred icon size */
 	display: inline-block;
 	line-height: 1;
-	color: #777;
 	text-transform: none;
 	letter-spacing: normal;
 	word-wrap: normal;
@@ -813,7 +812,6 @@ body.ttrss_main .notify.notify_error i.icon-close {
 body.ttrss_main .alert {
   padding: 8px 35px 8px 14px;
   margin-bottom: 10px;
-  /* text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); */
   background-color: #fcf8e3;
   border: 1px solid #fbeed5;
   border-radius: 4px;
@@ -944,7 +942,6 @@ body.ttrss_main #feeds-holder .dijitInline[style*="38px"] {
 body.ttrss_main #feeds-holder .dijitInline[style*="57px"] {
 	padding-right: 18px;
 }
-
 body.ttrss_main #feeds-holder img.feedIcon,
 body.ttrss_main #feeds-holder .labelColorIndicator {
 	position: relative;
@@ -1078,7 +1075,6 @@ body.ttrss_main #feeds-holder #feedTree i.icon.icon-restore {
 	left: -3px;
 	color: #257aff;
 }
-
 body.ttrss_main .dijitTreeIsRoot > .dijitTreeRow {
 	background-color: rgba(239,230,207,1);
 	border-top: 1px solid #8e8b8b !important;
@@ -1100,6 +1096,9 @@ body.ttrss_main .dijitTreeRow.UpdatesDisabled .dijitTreeLabel {
 /***
 * Feeds // Content Wrap
 ***/
+body.ttrss_index .material-icons {
+	color: #777;
+}
 body.ttrss_main #content-wrap {
 	overflow: visible;
 	padding: 0px;
