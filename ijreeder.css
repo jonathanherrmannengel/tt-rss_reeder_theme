@@ -1,4 +1,4 @@
-/* supports-version:19.8 */
+/* supports-version:20.03 */
 
 /***
 * Dependencies
@@ -998,16 +998,13 @@ body.ttrss_main #feeds-holder #feedTree .counterNode {
 	float: right;
 	font-size: 10px;
 	font-weight: bold;
-	display: inline-block;
+	display: none;
 	text-align: center;
 	vertical-align: middle;
 	position: relative;
 	margin-right: 8px;
 	margin-top: 2px;
 	height: 14px;
-}
-body.ttrss_main #feeds-holder #feedTree .counterNode,
-body.ttrss_main #feeds-holder #feedTree .counterNode.aux {
 	background-color: #d2d0c4;
 	color: #383734;
 	border: 1px solid #bebcb0;
@@ -1016,8 +1013,10 @@ body.ttrss_main #feeds-holder #feedTree .counterNode.aux {
 	min-width: 0;
 	border-radius: 2px;
 }
-body.ttrss_main #feeds-holder #feedTree .counterNode.aux {
-	color: #383734;
+body.ttrss_main[view-mode="marked"] #feeds-holder #feedTree .Has_Marked > .counterNode.marked,
+body.ttrss_main:not([view-mode="marked"]) #feeds-holder #feedTree .Unread > .counterNode.unread,
+body.ttrss_main:not([view-mode="marked"]) #feeds-holder #feedTree .Has_Aux:not(.Unread) > .counterNode.aux {
+	display: inline-block;
 }
 body.ttrss_main #feeds-holder #feedTree .dijitTreeNode .dijitTreeRowSelected {
 	background-color: rgba(215,206,186,1);
