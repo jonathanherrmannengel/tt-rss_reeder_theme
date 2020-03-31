@@ -2090,9 +2090,14 @@ body.ttrss_prefs div#labellistLoading {
 }
 body.ttrss_prefs fieldset {
 	border: none;
+	margin: 10px;
+}
+body.ttrss_prefs fieldset > label {
+	display: inline-block;
+	min-width: 300px;	
 }
 body.ttrss_prefs fieldset > * {
-	margin: 10px;
+	margin-right: 10px !important;
 }
 body.ttrss_prefs #errorButton {
 	color: red;
@@ -2255,6 +2260,24 @@ body.ttrss_prefs div.help-text {
 	}	
 	.feed, .updated {
 		display: none !important;
+	}
+	body.ttrss_prefs fieldset {
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		justify-content: center;
+		align-items: center;
+		justify-items: center;
+		align-self: center;
+		justify-self: center;
+		text-align: center;
+	}
+	body.ttrss_prefs fieldset > label {
+		min-width: unset;	
+	}
+	body.ttrss_prefs fieldset > * {
+		margin-right: 0px !important;
+		width: 100%;
 	}
 }
 @media (max-width: 849px) and (orientation: landscape) {	
