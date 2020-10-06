@@ -1,4 +1,4 @@
-/* supports-version:20.09 */
+/* supports-version:20.10 */
 
 /***
 * Dependencies
@@ -955,17 +955,6 @@ body.ttrss_main #feeds-holder .dijitTreeExpandoLeaf,
 body.ttrss_main #feeds-holder[style*=none] ~ .dijitSplitter { /* hide splitter when sidebar is collapsed */
 	display: none;
 }
-body.ttrss_main #feeds-holder .dijitTreeExpandoLeaf[src*=indicator] ~ .dijitTreeContent:after {
-	margin-left: 5px;
-	width: 16px;
-	height: 11px;
-	opacity: 1;
-	display: inline-block;
-	margin-left: 2px; /* compensate added white-space */
-	background: transparent url(ijreeder/loader-bars.gif) 0 0 no-repeat;
-	content: "";
-	vertical-align: middle;
-}
 body.ttrss_main #feeds-holder #feedTree {
 	background-color: rgba(239,230,207,1) !important;
 	background-image: url(ijreeder/reeder_stripes.png) !important;
@@ -1173,6 +1162,9 @@ body.ttrss_main #toolbar-frame #toolbar-main {
 	padding: 0;
 	border: none;
 	background: transparent;
+}
+body.ttrss_main #toolbar-frame .action-chooser .dijitArrowButtonInner {
+	display: none;
 }
 body.ttrss_main #toolbar-frame #toolbar-headlines {
 	padding-right: 4px;
