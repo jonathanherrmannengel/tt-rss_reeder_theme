@@ -167,6 +167,9 @@ a:hover {
 textarea {
 	box-sizing: border-box;
 }
+fieldset {
+	border: none;
+}
 body.ttrss_main h1 {
 	font-size: 18px;
 	font-weight: 600;
@@ -359,11 +362,6 @@ body.ttrss_main div.dlgSecCont > * {
 	position : relative;
 	top : -2px;
 }
-body.ttrss_main .dijitDialog .dlgButtons {
-	margin-top: 4px;
-	text-align : right;
-	clear : both;
-}
 body.ttrss_main i.icon-label {
   color: #fff7d5;
 }
@@ -498,12 +496,19 @@ body.ttrss_main #exceptionDlg .dijitDialogTitleBar {
   background: red;
   color: white;
 }
-
 body.ttrss_main .dijitDialog h1:first-of-type,
 body.ttrss_main .dijitDialog h2:first-of-type,
 body.ttrss_main .dijitDialog h3:first-of-type,
 body.ttrss_main .dijitDialog h4:first-of-type {
   margin-top: 0px;
+}
+body.ttrss_main .dijitDialog .dlgButtons {
+	margin-top: 4px;
+	text-align : right;
+	clear : both;
+}
+body.ttrss_main .dijitDialog footer {
+	text-align : right;
 }
 body.ttrss_main #exceptionDlg .dijitDialogPaneContent {
   background: #fcc;
@@ -2081,7 +2086,6 @@ body.ttrss_prefs div#labellistLoading {
 	margin-right: 5px;
 }
 body.ttrss_prefs fieldset {
-	border: none;
 	margin: 10px;
 }
 body.ttrss_prefs fieldset > label {
@@ -2253,6 +2257,8 @@ body.ttrss_prefs div.help-text {
 	.feed, .updated {
 		display: none !important;
 	}
+}
+@media (max-width: 649px) {	
 	body.ttrss_prefs fieldset {
 		display: flex;
 		flex-direction: column;
